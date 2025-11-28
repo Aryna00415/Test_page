@@ -1,1 +1,15 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  display: grid;
+  grid-row: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  font-family: "Open Sans";
+  font-size: 16px;
+}/*# sourceMappingURL=styles.css.map */
