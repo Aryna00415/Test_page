@@ -1,4 +1,9 @@
+*{
+   
+    margin: 0;
+    padding: 0;
+}
 body{
-    display: grid;
-    grid-row: inherit;
+    display: block;
+     min-height: 100vh;
 }

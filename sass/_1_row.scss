@@ -1,0 +1,127 @@
+.blog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #0A2640;
+    gap: 22px;
+    padding-top: 48px;
+
+    .blog_name {
+
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 20px;
+
+    }
+
+    .thoughts {
+        font-family: "Manrope";
+        font-weight: 400;
+        font-size: 64px;
+
+        @media (max-width: 320px) {
+
+            font-size: 29px;
+        }
+    }
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    @media (max-width: 320px) {
+        display: block;
+        padding-top: 5%;
+        padding-left: 10%;
+    }
+
+    .img1 {
+        width: 69%;
+
+        @media (max-width: 320px) {
+            width: 91%;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        .type,
+        .author {
+            display: flex;
+            align-items: center;
+            font-family: "Open Sans";
+            font-size: 16px;
+            gap: 12px;
+        }
+
+        .category_name {
+            color: #0A2640;
+            font-weight: 700;
+
+        }
+
+        .data {
+            font-weight: 400;
+            color: #777777;
+        }
+
+        .description {
+            font-family: "Manrope";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 72px;
+
+            @media (max-width: 768px) {
+                font-size: 36px;
+                line-height: 51px;
+            }
+
+            @media (max-width: 320px) {
+                font-size: 20px;
+                line-height: 34px;
+            }
+        }
+
+
+        .face {
+            width: 32px;
+            height: 32px;
+            border-radius: 48%;
+        }
+
+        .girl_name {
+            display: flex;
+        }
+
+    }
+
+    .custom-line {
+        border: none;
+        height: 1px;
+        width: 169%;
+        background-color: #0A2640;
+        margin-left: 630px;
+        margin-top: 56px;
+
+        @media (max-width: 1024px) {
+            width: 179%;
+            margin-left: 498px;
+        }
+
+        @media (max-width: 768px) {
+            margin-left: 449px;
+        }
+
+        @media (max-width: 320px) {
+            width: 90%;
+            margin-left: -24px;
+        }
+
+    }
+
+}
