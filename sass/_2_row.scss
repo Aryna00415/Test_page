@@ -1,0 +1,120 @@
+.news {
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 48px;
+    padding-left: 61px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 22px;
+    row-gap: 68px;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .text1 {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding-left: 60px;
+        padding-top: 6px;
+
+        .type1,
+        .author1 {
+            display: flex;
+            align-items: center;
+            font-family: "Open Sans";
+            font-size: 16px;
+            gap: 12px;
+            padding-top: 17px;
+        }
+
+        .author1 {
+            padding-top: 33px;
+        }
+
+        .category_name1 {
+            color: #0A2640;
+            font-weight: 700;
+
+        }
+
+        .data1 {
+            font-weight: 400;
+            color: #777777;
+        }
+
+        .description1 {
+            font-family: "Manrope";
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 32px;
+            width: 63%;
+        }
+
+
+        .face1 {
+            width: 32px;
+            height: 32px;
+            border-radius: 48%;
+        }
+
+        .girl_name1 {
+            display: flex;
+        }
+    }
+}
+
+.second .text1 .description1,
+.fifth .text1 .description1 {
+    width: 81%;
+}
+
+.second .text1 .author1,
+.fifth .text1 .author1 {
+    padding-top: 2px;
+}
+
+.third .text1 .description1,
+.sixth .text1 .description1 {
+    width: 82%;
+}
+
+.third .text1 .author1,
+.sixth .text1 .author1 {
+    padding-top: 2px;
+}
+
+.load_more {
+ display: flex;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 20px;
+    color: #0A2640;
+    width: 219px;
+    height: 60px;
+    border-radius: 56px;
+    border: 2px solid #0A2640;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 40%;
+    cursor: pointer;
+    &:hover{
+        color: white;
+        background-color: #0A2640;
+    }
+}
