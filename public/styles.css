@@ -4,27 +4,32 @@
 }
 
 body {
+  display: block;
   min-height: 100vh;
 }
 
-header, footer {
+header,
+footer {
   display: flex;
   justify-content: space-between;
   padding-top: 19px;
+  gap: 113px;
 }
-header .logo, footer .logo {
+header .logo,
+footer .logo {
   display: flex;
   align-items: center;
 }
-header .logo .name, footer .logo .name {
+header .logo .name,
+footer .logo .name {
   font-family: "Manrope";
   font-weight: bold;
   font-size: 43.25px;
   color: #0A2640;
   padding-left: 37px;
 }
-header .logo::before,
-header .logo::after, footer .logo::before,
+header .logo::before, header .logo::after,
+footer .logo::before,
 footer .logo::after {
   content: "";
   position: absolute;
@@ -33,29 +38,42 @@ footer .logo::after {
   height: 13.26px;
   margin-top: -18px;
 }
-header .logo::before, footer .logo::before {
+header .logo::before,
+footer .logo::before {
   border-top-right-radius: 12.01px;
   border-bottom-right-radius: 12.01px;
 }
-header .logo::after, footer .logo::after {
+header .logo::after,
+footer .logo::after {
   height: 17.68px;
   width: 25.91px;
   border-top-right-radius: 12.01px;
   border-bottom-right-radius: 12.01px;
   margin-top: 18px;
 }
-header .nav, footer .nav {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+header .nav,
+footer .nav {
+  display: flex;
+  gap: 100px;
+  flex-direction: row;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 600;
   align-items: center;
   padding-right: 19px;
   color: #0A2640;
+}
+header .nav_link,
+footer .nav_link {
   cursor: pointer;
 }
-header .nav .login, footer .nav .login {
+header .nav_link:hover,
+footer .nav_link:hover {
+  font-size: 18px;
+  transition: 0.3s;
+}
+header .nav .login,
+footer .nav .login {
   display: flex;
   font-weight: bold;
   width: 128px;
@@ -64,10 +82,20 @@ header .nav .login, footer .nav .login {
   border: 2px solid #0A2640;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 }
-header .nav .login:hover, footer .nav .login:hover {
+header .nav .login:hover,
+footer .nav .login:hover {
   background-color: #0A2640;
   color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+@media (max-width: 320px) {
+  header .nav,
+  footer .nav {
+    gap: 43px;
+  }
 }
 
 .container {
@@ -130,6 +158,12 @@ header .nav .login:hover, footer .nav .login:hover {
   font-weight: 400;
   line-height: 72px;
 }
+@media (max-width: 768px) {
+  .category .text .description {
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
 .category .text .face {
   width: 32px;
   height: 32px;
@@ -146,6 +180,22 @@ header .nav .login:hover, footer .nav .login:hover {
   margin-left: 630px;
   margin-top: 56px;
 }
+@media (max-width: 1024px) {
+  .category .custom-line {
+    width: 179%;
+    margin-left: 498px;
+  }
+}
+@media (max-width: 768px) {
+  .category .custom-line {
+    margin-left: 449px;
+  }
+}
+@media (max-width: 320px) {
+  .category .custom-line {
+    margin-left: 382px;
+  }
+}
 
 .news {
   font-family: "Manrope";
@@ -156,12 +206,11 @@ header .nav .login:hover, footer .nav .login:hover {
 
 .articles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(318px, 3fr));
   padding-top: 22px;
-  row-gap: 68px;
+  gap: 24px;
+  row-gap: 8%;
 }
-
 .first,
 .second,
 .third,
@@ -212,6 +261,16 @@ header .nav .login:hover, footer .nav .login:hover {
 .sixth .text1 .author1 {
   padding-top: 33px;
 }
+@media (max-width: 768px) {
+  .first .text1 .author1,
+  .second .text1 .author1,
+  .third .text1 .author1,
+  .fourth .text1 .author1,
+  .fifth .text1 .author1,
+  .sixth .text1 .author1 {
+    padding-top: 35px;
+  }
+}
 .first .text1 .category_name1,
 .second .text1 .category_name1,
 .third .text1 .category_name1,
@@ -240,7 +299,17 @@ header .nav .login:hover, footer .nav .login:hover {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  width: 63%;
+  width: 66%;
+}
+@media (max-width: 768px) {
+  .first .text1 .description1,
+  .second .text1 .description1,
+  .third .text1 .description1,
+  .fourth .text1 .description1,
+  .fifth .text1 .description1,
+  .sixth .text1 .description1 {
+    width: 73%;
+  }
 }
 .first .text1 .face1,
 .second .text1 .face1,
@@ -263,7 +332,13 @@ header .nav .login:hover, footer .nav .login:hover {
 
 .second .text1 .description1,
 .fifth .text1 .description1 {
-  width: 81%;
+  width: 84%;
+}
+@media (max-width: 768px) {
+  .second .text1 .description1,
+  .fifth .text1 .description1 {
+    width: 93%;
+  }
 }
 
 .second .text1 .author1,
@@ -273,7 +348,13 @@ header .nav .login:hover, footer .nav .login:hover {
 
 .third .text1 .description1,
 .sixth .text1 .description1 {
-  width: 82%;
+  width: 86%;
+}
+@media (max-width: 768px) {
+  .third .text1 .description1,
+  .sixth .text1 .description1 {
+    width: 96%;
+  }
 }
 
 .third .text1 .author1,
@@ -294,13 +375,18 @@ header .nav .login:hover, footer .nav .login:hover {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 40%;
   cursor: pointer;
 }
 .load_more:hover {
   color: white;
   background-color: #0A2640;
+}
+@media (max-width: 768px) {
+  .load_more {
+    margin-top: 40%;
+  }
 }
 
 .banner {
@@ -334,6 +420,13 @@ header .nav .login:hover, footer .nav .login:hover {
   padding-bottom: 6%;
   z-index: 2;
 }
+@media (max-width: 320px) {
+  .banner .website {
+    padding-bottom: 7%;
+    font-size: 40px;
+    width: 703px;
+  }
+}
 .banner .start {
   display: flex;
   padding-bottom: 5%;
@@ -364,6 +457,17 @@ header .nav .login:hover, footer .nav .login:hover {
   font-size: 23px;
   transition: 0.1s;
 }
+@media (max-width: 768px) {
+  .banner {
+    width: 106%;
+  }
+}
+@media (max-width: 320px) {
+  .banner {
+    width: 98%;
+    height: 315px;
+  }
+}
 
 footer {
   display: grid;
@@ -391,6 +495,12 @@ footer .reserved {
   font-weight: 400;
   font-size: 16px;
   color: #777777;
+}
+@media (max-width: 320px) {
+  footer .footer_text,
+  footer .reserved {
+    width: 269px;
+  }
 }
 footer .reserved {
   padding-top: 3%;
@@ -432,4 +542,18 @@ footer .features .careers_section .Hiring {
   background-color: #65E4A3;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  footer .features {
+    -moz-column-gap: 10%;
+         column-gap: 10%;
+  }
+}
+@media (max-width: 320px) {
+  footer .features {
+    font-size: 16px;
+    -moz-column-gap: 16%;
+         column-gap: 16%;
+    margin-left: -27%;
+  }
 }/*# sourceMappingURL=styles.css.map */
