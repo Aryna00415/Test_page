@@ -1,9 +1,75 @@
-header{
-  display: flex;
-  justify-content: space-between;
-}
-.nav{
+header,footer {
     display: flex;
-    font-family: "Open Sans";
-    font-size: 16px;
+    justify-content: space-between;
+    padding-top: 19px;
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .name {
+            font-family: "Manrope";
+            font-weight: bold;
+            font-size: 43.25px;
+            color: #0A2640;
+            padding-left: 37px;
+
+        }
+
+    }
+
+    .logo::before,
+    .logo::after {
+        content: "";
+        position: absolute;
+        background-color: #0A2640;
+        width: 18.02px;
+        height: 13.26px;
+        margin-top: -18px;
+
+    }
+
+    .logo::before {
+        border-top-right-radius: 12.01px;
+        border-bottom-right-radius: 12.01px;
+    }
+
+    .logo::after {
+        height: 17.68px;
+        width: 25.91px;
+        border-top-right-radius: 12.01px;
+        border-bottom-right-radius: 12.01px;
+        margin-top: 18px;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 600;
+        align-items: center;
+        padding-right: 19px;
+        color: #0A2640;
+        cursor: pointer;
+
+        .login {
+            display: flex;
+            font-weight: bold;
+            width: 128px;
+            height: 39px;
+            border-radius: 24px;
+            border: 2px solid #0A2640; 
+            justify-content: space-evenly;
+            align-items: center;
+
+            &:hover {
+                background-color: #0A2640;
+                color: white;
+            }
+        }
+
+
+    }
 }
