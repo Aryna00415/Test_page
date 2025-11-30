@@ -1,51 +1,51 @@
 header,
 footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 19px;
+  gap: 113px;
+
+  .logo {
     display: flex;
-    justify-content: space-between;
-    padding-top: 19px;
-    gap: 113px;
+    align-items: center;
 
-    .logo {
-        display: flex;
-        align-items: center;
+    .name {
+      font-family: "Manrope";
+      font-weight: bold;
+      font-size: 43.25px;
+      color: #0A2640;
+      padding-left: 37px;
 
-        .name {
-            font-family: "Manrope";
-            font-weight: bold;
-            font-size: 43.25px;
-            color: #0A2640;
-            padding-left: 37px;
+    }
 
-        }
 
-    
 
     &::before,
     &::after {
-        content: "";
-        position: absolute;
-        background-color: #0A2640;
-        width: 18.02px;
-        height: 13.26px;
-        margin-top: -18px;
+      content: "";
+      position: absolute;
+      background-color: #0A2640;
+      width: 18.02px;
+      height: 13.26px;
+      margin-top: -18px;
 
     }
 
     &::before {
-        border-top-right-radius: 12.01px;
-        border-bottom-right-radius: 12.01px;
+      border-top-right-radius: 12.01px;
+      border-bottom-right-radius: 12.01px;
     }
 
     &::after {
-        height: 17.68px;
-        width: 25.91px;
-        border-top-right-radius: 12.01px;
-        border-bottom-right-radius: 12.01px;
-        margin-top: 18px;
+      height: 17.68px;
+      width: 25.91px;
+      border-top-right-radius: 12.01px;
+      border-bottom-right-radius: 12.01px;
+      margin-top: 18px;
     }
-    }
+  }
 
-.nav {
+  .nav {
     display: flex;
     gap: 100px;
     flex-direction: row;
@@ -57,34 +57,37 @@ footer {
     color: #0A2640;
 
     &_link {
-        cursor: pointer;
+      cursor: pointer;
 
-        &:hover {
-            font-size: 18px;
-            transition: 0.3s;
-        }
+      &:hover {
+        font-size: 18px;
+        transition: 0.3s;
+      }
     }
 
     .login {
-        display: flex;
-        font-weight: bold;
-        width: 128px;
-        height: 39px;
-        border-radius: 24px;
-        border: 2px solid #0A2640;
-        justify-content: space-evenly;
-        align-items: center;
-        cursor: pointer;
+      display: flex;
+      font-weight: bold;
+      width: 128px;
+      height: 39px;
+      border-radius: 24px;
+      border: 2px solid #0A2640;
+      justify-content: space-evenly;
+      align-items: center;
+      cursor: pointer;
 
-        &:hover {
-            background-color: #0A2640;
-            color: white;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+      &:hover {
+        background-color: #0A2640;
+        color: white;
+        font-size: 18px;
+        transition: 0.3s;
+      }
     }
-@media (max-width: 320px) {gap: 43px;}
-}
+
+    @media (max-width: 320px) {
+      gap: 31px;
+    }
+  }
 
 
 }

@@ -94,7 +94,7 @@ footer .nav .login:hover {
 @media (max-width: 320px) {
   header .nav,
   footer .nav {
-    gap: 43px;
+    gap: 31px;
   }
 }
 
@@ -552,8 +552,8 @@ footer .features .careers_section .Hiring {
 @media (max-width: 320px) {
   footer .features {
     font-size: 16px;
-    -moz-column-gap: 16%;
-         column-gap: 16%;
-    margin-left: -27%;
+    -moz-column-gap: 12%;
+         column-gap: 12%;
+    margin-left: -33%;
   }
 }/*# sourceMappingURL=styles.css.map */
