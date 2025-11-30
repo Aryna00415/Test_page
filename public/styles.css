@@ -1,15 +1,435 @@
-body {
-  display: grid;
-  grid-row: inherit;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header {
+body {
+  min-height: 100vh;
+}
+
+header, footer {
   display: flex;
   justify-content: space-between;
+  padding-top: 19px;
 }
-
-.nav {
+header .logo, footer .logo {
   display: flex;
+  align-items: center;
+}
+header .logo .name, footer .logo .name {
+  font-family: "Manrope";
+  font-weight: bold;
+  font-size: 43.25px;
+  color: #0A2640;
+  padding-left: 37px;
+}
+header .logo::before,
+header .logo::after, footer .logo::before,
+footer .logo::after {
+  content: "";
+  position: absolute;
+  background-color: #0A2640;
+  width: 18.02px;
+  height: 13.26px;
+  margin-top: -18px;
+}
+header .logo::before, footer .logo::before {
+  border-top-right-radius: 12.01px;
+  border-bottom-right-radius: 12.01px;
+}
+header .logo::after, footer .logo::after {
+  height: 17.68px;
+  width: 25.91px;
+  border-top-right-radius: 12.01px;
+  border-bottom-right-radius: 12.01px;
+  margin-top: 18px;
+}
+header .nav, footer .nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   font-family: "Open Sans";
   font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  padding-right: 19px;
+  color: #0A2640;
+  cursor: pointer;
+}
+header .nav .login, footer .nav .login {
+  display: flex;
+  font-weight: bold;
+  width: 128px;
+  height: 39px;
+  border-radius: 24px;
+  border: 2px solid #0A2640;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .nav .login:hover, footer .nav .login:hover {
+  background-color: #0A2640;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 0fr);
+  gap: 53px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #0A2640;
+  gap: 22px;
+  padding-top: 48px;
+}
+.blog .blog_name {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 20px;
+}
+.blog .thoughts {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.category .img1 {
+  width: 69%;
+}
+.category .text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.category .text .type,
+.category .text .author {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 16px;
+  gap: 12px;
+}
+.category .text .category_name {
+  color: #0A2640;
+  font-weight: 700;
+}
+.category .text .data {
+  font-weight: 400;
+  color: #777777;
+}
+.category .text .description {
+  font-family: "Manrope";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+}
+.category .text .face {
+  width: 32px;
+  height: 32px;
+  border-radius: 48%;
+}
+.category .text .girl_name {
+  display: flex;
+}
+.category .custom-line {
+  border: none;
+  height: 1px;
+  width: 169%;
+  background-color: #0A2640;
+  margin-left: 630px;
+  margin-top: 56px;
+}
+
+.news {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 48px;
+  padding-left: 61px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding-top: 22px;
+  row-gap: 68px;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.first .text1,
+.second .text1,
+.third .text1,
+.fourth .text1,
+.fifth .text1,
+.sixth .text1 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 60px;
+  padding-top: 6px;
+}
+.first .text1 .type1,
+.first .text1 .author1,
+.second .text1 .type1,
+.second .text1 .author1,
+.third .text1 .type1,
+.third .text1 .author1,
+.fourth .text1 .type1,
+.fourth .text1 .author1,
+.fifth .text1 .type1,
+.fifth .text1 .author1,
+.sixth .text1 .type1,
+.sixth .text1 .author1 {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 16px;
+  gap: 12px;
+  padding-top: 17px;
+}
+.first .text1 .author1,
+.second .text1 .author1,
+.third .text1 .author1,
+.fourth .text1 .author1,
+.fifth .text1 .author1,
+.sixth .text1 .author1 {
+  padding-top: 33px;
+}
+.first .text1 .category_name1,
+.second .text1 .category_name1,
+.third .text1 .category_name1,
+.fourth .text1 .category_name1,
+.fifth .text1 .category_name1,
+.sixth .text1 .category_name1 {
+  color: #0A2640;
+  font-weight: 700;
+}
+.first .text1 .data1,
+.second .text1 .data1,
+.third .text1 .data1,
+.fourth .text1 .data1,
+.fifth .text1 .data1,
+.sixth .text1 .data1 {
+  font-weight: 400;
+  color: #777777;
+}
+.first .text1 .description1,
+.second .text1 .description1,
+.third .text1 .description1,
+.fourth .text1 .description1,
+.fifth .text1 .description1,
+.sixth .text1 .description1 {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 63%;
+}
+.first .text1 .face1,
+.second .text1 .face1,
+.third .text1 .face1,
+.fourth .text1 .face1,
+.fifth .text1 .face1,
+.sixth .text1 .face1 {
+  width: 32px;
+  height: 32px;
+  border-radius: 48%;
+}
+.first .text1 .girl_name1,
+.second .text1 .girl_name1,
+.third .text1 .girl_name1,
+.fourth .text1 .girl_name1,
+.fifth .text1 .girl_name1,
+.sixth .text1 .girl_name1 {
+  display: flex;
+}
+
+.second .text1 .description1,
+.fifth .text1 .description1 {
+  width: 81%;
+}
+
+.second .text1 .author1,
+.fifth .text1 .author1 {
+  padding-top: 2px;
+}
+
+.third .text1 .description1,
+.sixth .text1 .description1 {
+  width: 82%;
+}
+
+.third .text1 .author1,
+.sixth .text1 .author1 {
+  padding-top: 2px;
+}
+
+.load_more {
+  display: flex;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 20px;
+  color: #0A2640;
+  width: 219px;
+  height: 60px;
+  border-radius: 56px;
+  border: 2px solid #0A2640;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 40%;
+  cursor: pointer;
+}
+.load_more:hover {
+  color: white;
+  background-color: #0A2640;
+}
+
+.banner {
+  display: flex;
+  width: 96%;
+  height: 391px;
+  background-color: #0A2640;
+  margin-left: 2.5%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+}
+.banner::before {
+  content: "";
+  margin-bottom: -16%;
+  margin-left: 56%;
+  width: 44%;
+  height: 67%;
+  background: transparent;
+  border-radius: 0 12px 0 100%;
+  background-color: #1C3D5B;
+}
+.banner .website {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 48px;
+  color: white;
+  width: 716px;
+  text-align: center;
+  padding-bottom: 6%;
+  z-index: 2;
+}
+.banner .start {
+  display: flex;
+  padding-bottom: 5%;
+  gap: 6%;
+  z-index: 2;
+}
+.banner .start input[type=email] {
+  width: 370px;
+  height: 56px;
+  border-radius: 240px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 5%;
+}
+.banner .start button {
+  width: 210px;
+  height: 60px;
+  padding: 12px 30px;
+  background-color: #65E4A3;
+  color: #0A2640;
+  border: none;
+  border-radius: 56px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.banner .start button:hover {
+  font-size: 23px;
+  transition: 0.1s;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 13%;
+  padding-top: 79px;
+}
+footer .logo::before,
+footer .logo::after {
+  width: 17.33px;
+  height: 12.25px;
+}
+footer .logo::after {
+  height: 17.26px;
+  width: 24.92px;
+}
+footer .first_part {
+  display: grid;
+  gap: 25%;
+}
+footer .footer_text,
+footer .reserved {
+  width: 300px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+}
+footer .reserved {
+  padding-top: 3%;
+}
+footer .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  font-family: "Open Sans";
+  font-size: 20px;
+  row-gap: 28%;
+}
+footer .features .Landings {
+  font-weight: bold;
+}
+footer .features .Home,
+footer .features .Careers {
+  font-weight: 400;
+  color: #777777;
+  cursor: pointer;
+}
+footer .features .Home:hover,
+footer .features .Careers:hover {
+  color: #0A2640;
+  font-weight: 600;
+}
+footer .features .careers_section {
+  display: flex;
+  gap: 10px;
+}
+footer .features .careers_section .Hiring {
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
+  width: 72px;
+  height: 30px;
+  border-radius: 120px;
+  text-align: center;
+  background-color: #65E4A3;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
