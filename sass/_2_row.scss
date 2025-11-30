@@ -3,6 +3,13 @@
     font-weight: 400;
     font-size: 48px;
     padding-left: 61px;
+
+
+    @media (max-width: 320px) {
+        padding-top: 6%;
+        font-size: 28px;
+        padding-left: 19px;
+    }
 }
 
 .articles {
@@ -12,8 +19,8 @@
     gap: 24px;
     row-gap: 8%;
 
-    @media (max-width: 768px) {
-        // grid-template-columns:repeat(2, 1fr);
+    @media (max-width: 320px) {
+        row-gap: 3%;
     }
 }
 
@@ -28,12 +35,21 @@
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 320px) {
+        gap: 0px;
+    }
+
     .text1 {
         display: flex;
         flex-direction: column;
         gap: 14px;
         padding-left: 60px;
         padding-top: 6px;
+
+        @media (max-width: 320px) {
+            font-size: 14px;
+            gap: 18px;
+        }
 
         .type1,
         .author1 {
@@ -47,10 +63,17 @@
 
         .author1 {
             padding-top: 33px;
-              @media (max-width: 768px) {  padding-top: 35px;}
+
+            @media (max-width: 768px) {
+                padding-top: 35px;
+            }
+
+            @media (max-width: 320px) {
+                margin-top: -35px;
+            }
         }
 
-       
+
         .category_name1 {
             color: #0A2640;
             font-weight: 700;
@@ -69,10 +92,16 @@
             line-height: 32px;
             width: 66%;
 
- @media (max-width: 768px) {
-            width: 73%;}
-        }
+            @media (max-width: 768px) {
+                width: 73%;
+            }
 
+            @media (max-width: 320px) {
+                font-size: 16px;
+
+                line-height: 29px;
+            }
+        }
 
         .face1 {
             width: 32px;
@@ -89,25 +118,40 @@
 .second .text1 .description1,
 .fifth .text1 .description1 {
     width: 84%;
-    @media (max-width: 768px) { width: 93%;}
+
+    @media (max-width: 768px) {
+        width: 93%;
+    }
+
 }
-   
+
 
 .second .text1 .author1,
 .fifth .text1 .author1 {
     padding-top: 2px;
+
+    @media (max-width: 320px) {
+        padding-top: 26px;
+    }
 }
 
 .third .text1 .description1,
 .sixth .text1 .description1 {
     width: 86%;
-     @media (max-width: 768px) { width: 96%;}
+
+    @media (max-width: 768px) {
+        width: 96%;
+    }
+
 }
 
 .third .text1 .author1,
 .sixth .text1 .author1 {
     padding-top: 2px;
 
+    @media (max-width: 320px) {
+        padding-top: 29px;
+    }
 
 }
 
@@ -135,5 +179,11 @@
 
     @media (max-width: 768px) {
         margin-top: 40%;
+    }
+
+    @media (max-width: 320px) {
+        margin-top: 127%;
+        margin-left: 17%;
+        margin-bottom: 17%;
     }
 }

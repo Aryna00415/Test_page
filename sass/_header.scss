@@ -5,6 +5,8 @@ footer {
   padding-top: 19px;
   gap: 113px;
 
+
+
   .logo {
     display: flex;
     align-items: center;
@@ -85,9 +87,37 @@ footer {
     }
 
     @media (max-width: 320px) {
-      gap: 31px;
+
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      background-color: white;
+      text-align: center;
+      top: -377px;
+      right: 40px;
+      border: 2px solid #1c3d5b;
+      height: 342px;
+      width: 199px;
+      transition-duration: 2s;
+
+      &.link {
+        display: block;
+        margin: 57px 47px 0px 44px;
+        font-size: 17px;
+      }
+
+      .login {
+        margin-top: 18%;
+        margin-left: 16%;
+
+       
+      }
     }
+
   }
 
-
+  @media (max-width: 320px) {
+    align-items: center;
+  }
 }

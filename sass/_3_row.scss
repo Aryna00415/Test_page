@@ -31,9 +31,9 @@
         z-index: 2;
 
         @media (max-width:320px) {
-            padding-bottom: 7%;
-            font-size: 40px;
-            width: 703px;
+            padding-bottom: 15%;
+            font-size: 18px;
+            width: 282px;
         }
     }
 
@@ -43,6 +43,15 @@
         padding-bottom: 5%;
         gap: 6%;
         z-index: 2;
+
+        @media (max-width:320px) {
+            display: flex;
+            padding-bottom: 0;
+            gap: 21px;
+            z-index: 2;
+            flex-direction: column;
+            align-items: center;
+        }
 
         input[type="email"] {
 
@@ -54,6 +63,11 @@
             font-size: 20px;
             padding-left: 5%;
 
+            @media (max-width:320px) {
+                width: 255px;
+                height: 50px;
+                font-size: 17px;
+            }
         }
 
         button {
@@ -71,6 +85,12 @@
                 font-size: 23px;
                 transition: 0.1s;
             }
+
+            @media (max-width:320px) {
+                width: 157px;
+                height: 52px;
+                font-size: 19px;
+            }
         }
     }
 
@@ -80,6 +100,7 @@
 
     @media (max-width:320px) {
         width: 98%;
-        height: 315px;
+        height: 256px;
+        margin-left: 0.5%;
     }
 }
