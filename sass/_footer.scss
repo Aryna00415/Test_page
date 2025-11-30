@@ -1,0 +1,87 @@
+   footer {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       margin-bottom: 13%;
+       padding-top: 79px;
+
+       .logo::before,
+       .logo::after {
+           width: 17.33px;
+           height: 12.25px;
+
+       }
+
+       .logo::after {
+           height: 17.26px;
+           width: 24.92px;
+
+       }
+
+       .first_part {
+           display: grid;
+           gap: 25%;
+       }
+
+       .footer_text,
+       .reserved {
+
+           width: 300px;
+           font-family: "Open Sans";
+           font-weight: 400;
+           font-size: 16px;
+           color: #777777;
+       }
+
+       .reserved {
+           padding-top: 3%;
+       }
+
+       .features {
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: repeat(4, 1fr);
+           font-family: "Open Sans";
+           font-size: 20px;
+           row-gap: 28%;
+
+           .Landings {
+
+               font-weight: bold;
+
+           }
+
+           .Home,
+           .Careers {
+
+               font-weight: 400;
+               color: #777777;
+               cursor: pointer;
+
+              
+                &:hover{   
+                    color:#0A2640;
+                    font-weight: 600;
+               }
+
+           }
+
+           .careers_section {
+               display: flex;
+               gap: 10px;
+
+               .Hiring {
+
+                   display: flex;
+                   font-size: 13px;
+                   font-weight: bold;
+                   width: 72px;
+                   height: 30px;
+                   border-radius: 120px;
+                   text-align: center;
+                   background-color: #65E4A3;
+                   align-items: center;
+                   justify-content: center;
+               }
+           }
+       }
+   }
