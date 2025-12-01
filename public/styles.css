@@ -684,6 +684,7 @@ footer .nav .login:hover {
     width: 157px;
     height: 52px;
     font-size: 19px;
+    margin-bottom: 6%;
   }
 }
 @media (max-width: 768px) {
