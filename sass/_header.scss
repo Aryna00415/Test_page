@@ -5,11 +5,18 @@ footer {
   padding-top: 19px;
   gap: 113px;
 
-
+  @media (max-width: 560px) {
+    gap: 34px;
+  }
 
   .logo {
     display: flex;
     align-items: center;
+
+    @media (max-width: 560px) {
+      padding-bottom: 4%;
+    }
+
 
     .name {
       font-family: "Manrope";
@@ -17,6 +24,11 @@ footer {
       font-size: 43.25px;
       color: #0A2640;
       padding-left: 37px;
+
+
+      @media (max-width: 560px) {
+        font-size: 36.25px;
+      }
 
     }
 
@@ -58,13 +70,32 @@ footer {
     padding-right: 19px;
     color: #0A2640;
 
+    @media (max-width: 900px) {
+      gap: 69px;
+    }
+
+    @media (max-width: 708px) {
+      gap: 35px;
+    }
+
+
+    @media (max-width: 560px) {
+      font-size: 12px;
+    }
+
     &_link {
       cursor: pointer;
 
       &:hover {
         font-size: 18px;
-        transition: 0.3s;
+        transition: 0.3s; 
+        
+        @media (max-width: 400px) {
+     font-size: 17px;
+    }
+        
       }
+     
     }
 
     .login {
@@ -86,7 +117,7 @@ footer {
       }
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: 400px) {
 
       display: block;
       max-height: 0;
@@ -111,13 +142,13 @@ footer {
         margin-top: 18%;
         margin-left: 16%;
 
-       
+
       }
     }
 
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 400px) {
     align-items: center;
   }
 }
