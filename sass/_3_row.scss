@@ -105,8 +105,10 @@
             cursor: pointer;
 
             &:hover {
-                font-size: 23px;
+                 background-color: white;
+               
                 transition: 0.1s;
+
             }
 
             @media (max-width:400px) {
